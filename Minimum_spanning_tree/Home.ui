@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>750</height>
+    <width>1504</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,8 +34,8 @@
      <rect>
       <x>0</x>
       <y>-30</y>
-      <width>1211</width>
-      <height>811</height>
+      <width>1501</width>
+      <height>931</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -50,7 +50,7 @@
        <x>20</x>
        <y>50</y>
        <width>351</width>
-       <height>711</height>
+       <height>861</height>
       </rect>
      </property>
      <property name="autoFillBackground">
@@ -105,6 +105,14 @@
         <width>331</width>
         <height>321</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background: rgb(255, 255, 255)</string>
@@ -188,8 +196,8 @@
       <rect>
        <x>390</x>
        <y>50</y>
-       <width>791</width>
-       <height>711</height>
+       <width>1091</width>
+       <height>861</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -201,13 +209,13 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QTableView" name="tblMaTran">
+     <widget class="QTableWidget" name="tblMaTran">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>301</width>
-        <height>281</height>
+        <width>331</width>
+        <height>311</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -216,6 +224,12 @@
         <height>0</height>
        </size>
       </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">background:rgb(255, 255, 255)</string>
       </property>
@@ -223,10 +237,10 @@
      <widget class="QFrame" name="frame_4">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>350</x>
         <y>10</y>
-        <width>461</width>
-        <height>281</height>
+        <width>731</width>
+        <height>311</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -242,10 +256,10 @@
      <widget class="QFrame" name="frame">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>300</y>
-        <width>591</width>
-        <height>401</height>
+        <x>210</x>
+        <y>360</y>
+        <width>871</width>
+        <height>481</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -260,8 +274,8 @@
       <widget class="QPushButton" name="btnNext">
        <property name="geometry">
         <rect>
-         <x>490</x>
-         <y>370</y>
+         <x>770</x>
+         <y>450</y>
          <width>101</width>
          <height>31</height>
         </rect>
@@ -282,8 +296,8 @@
       <widget class="QPushButton" name="btnPrev">
        <property name="geometry">
         <rect>
-         <x>380</x>
-         <y>370</y>
+         <x>660</x>
+         <y>450</y>
          <width>101</width>
          <height>31</height>
         </rect>
@@ -306,20 +320,34 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>340</y>
-        <width>171</width>
-        <height>361</height>
+        <y>360</y>
+        <width>191</width>
+        <height>481</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background: rgb(255, 255, 255)</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>300</y>
+        <x>60</x>
+        <y>320</y>
         <width>81</width>
         <height>41</height>
        </rect>

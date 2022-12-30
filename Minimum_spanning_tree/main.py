@@ -1,7 +1,8 @@
 import sys
 from PyQt5 import QtWidgets
 from Home import Ui_MainWindow
-
+from Prim import prim
+from Kruskal import kruskal_algo
 
 class MainWindow:
     def __init__(self):
@@ -20,12 +21,17 @@ class MainWindow:
 
 
     def dokruscal(self):
-        a = self.uic.txtSoDinh.text()
+        a = int(self.uic.txtSoDinh.text())
         b = self.uic.txtMaTran.toPlainText()
-        print(a,b)
+        # kruskal_algo(a, b)
+        self.uic.txtResult.setPlainText(kruskal_algo(a, b))
 
     def doprim(self):
-        self.uic.btnPrim.setEnabled(False)
+        a = int(self.uic.txtSoDinh.text())
+        b = self.uic.txtMaTran.toPlainText()
+        prim(a, b)
+        self.uic.txtResult.setPlainText(prim(a, b))
+
 
     # def showinfo(self):
     #     self.uic.pushButton.setEnabled(False)
