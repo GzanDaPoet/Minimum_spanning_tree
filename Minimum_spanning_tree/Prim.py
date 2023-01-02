@@ -1,5 +1,5 @@
 def prim(v, g):
-    rs = ""
+    rs = []
     INF = 9999999
     a = list(g.split('\n'))
     lst = []
@@ -25,7 +25,7 @@ def prim(v, g):
                             minimum = g[i][j]
                             x = i
                             y = j
-        rs = rs+str(x) + " - " + str(y) + " : " + str(g[x][y])+"\n"
+        rs.append([x, y, g[x][y]])
         selected[y] = True
         no_edge += 1
     return rs

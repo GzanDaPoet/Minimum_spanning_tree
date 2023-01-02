@@ -3,6 +3,7 @@ import networkx as nx
 def draw_graph(listEdge):
     G = nx.Graph()
     for u, ver, weightVar in listEdge:
+        print(u, ver, weightVar)
         G.add_edge(u, ver, weight= weightVar)
     elarge = [(u, v) for (u, v, d) in G.edges(data=True) if d["weight"] > 4]
     esmall = [(u, v) for (u, v, d) in G.edges(data=True) if d["weight"] <= 4]
@@ -19,11 +20,10 @@ def draw_graph(listEdge):
     )
 
     # node labels
-    nx.draw_networkx_labels(G, pos, font_size=20, font_family="sans-serif")
+    nx.draw_networkx_labels(G, pos, font_size=16, font_family="sans-serif")
     # edge weight labels
     edge_labels = nx.get_edge_attributes(G, "weight")
     nx.draw_networkx_edge_labels(G, pos, edge_labels)
-
     ax = plt.gca()
     ax.margins(0.08)
     plt.axis("off")

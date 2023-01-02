@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Home.ui'
+# Form implementation generated from reading ui file 'home.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -128,6 +128,9 @@ class Ui_MainWindow(object):
         self.btnPrev.setFont(font)
         self.btnPrev.setStyleSheet("background:rgb(255, 85, 0)")
         self.btnPrev.setObjectName("btnPrev")
+        self.widget_2 = QtWidgets.QWidget(self.frame)
+        self.widget_2.setGeometry(QtCore.QRect(9, 19, 851, 421))
+        self.widget_2.setObjectName("widget_2")
         self.txtResult = QtWidgets.QPlainTextEdit(self.frame_3)
         self.txtResult.setGeometry(QtCore.QRect(10, 360, 191, 481))
         font = QtGui.QFont()
