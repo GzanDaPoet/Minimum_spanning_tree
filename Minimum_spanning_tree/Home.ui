@@ -315,14 +315,17 @@
         <string>Trước</string>
        </property>
       </widget>
-      <widget class="QWidget" name="widget_2" native="true">
+      <widget class="QLabel" name="image_label">
        <property name="geometry">
         <rect>
-         <x>9</x>
-         <y>19</y>
-         <width>851</width>
+         <x>20</x>
+         <y>10</y>
+         <width>831</width>
          <height>421</height>
         </rect>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>

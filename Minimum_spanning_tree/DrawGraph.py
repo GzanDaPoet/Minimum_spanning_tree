@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import networkx as nx
 def draw_graph(listEdge):
     G = nx.Graph()
+    plt.clf()
     for u, ver, weightVar in listEdge:
-        print(u, ver, weightVar)
         G.add_edge(u, ver, weight= weightVar)
     elarge = [(u, v) for (u, v, d) in G.edges(data=True) if d["weight"] > 4]
     esmall = [(u, v) for (u, v, d) in G.edges(data=True) if d["weight"] <= 4]
@@ -28,4 +28,4 @@ def draw_graph(listEdge):
     ax.margins(0.08)
     plt.axis("off")
     plt.tight_layout()
-    plt.show()
+    plt.savefig("graph.png")

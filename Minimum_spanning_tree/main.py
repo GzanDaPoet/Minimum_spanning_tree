@@ -1,7 +1,6 @@
 import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QPixmap
-from PyQt5.uic import loadUi
 from Home import Ui_MainWindow
 from Prim import prim
 from Kruskal import kruskal_algo
@@ -24,14 +23,17 @@ class MainWindow:
     # def showInfo(self):
 
     def donext(self):
-        print(self.length)
         if self.length >= self.count + 1:
             self.count = self.count + 1
             draw_graph(self.arrayDraw[:self.count:])
+            qpixMap = QPixmap("graph.png")
+            self.uic.image_label.setPixmap(qpixMap)
     def doPrev(self):
         if self.count - 1 >= 0:
             self.count = self.count - 1
             draw_graph(self.arrayDraw[:self.count:])
+            qpixMap = QPixmap("graph.png")
+            self.uic.image_label.setPixmap(qpixMap)
     def dokruscal(self):
         a = int(self.uic.txtSoDinh.text())
         b = self.uic.txtMaTran.toPlainText()
@@ -42,8 +44,7 @@ class MainWindow:
         self.uic.txtResult.setPlainText(rs)
         self.length = len(kruskal)
         self.arrayDraw = kruskal
-        self.count = 0
-        # draw_graph(kruskal)
+        self.count = 1
 
     def doprim(self):
         rs = ""
@@ -54,7 +55,7 @@ class MainWindow:
             rs = rs + ("%d - %d : %d \n" % (u, ver, weight))
         self.uic.txtResult.setPlainText(rs)
         self.length = len(arrPrim)
-        self.count = 0
+        self.count = 1
         self.arrayDraw = arrPrim
 
 
