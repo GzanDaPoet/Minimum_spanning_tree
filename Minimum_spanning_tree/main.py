@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets
 from Home import Ui_MainWindow
 from Prim import prim
 from Kruskal import kruskal_algo
+from DrawGraph import draw_graph
 
 class MainWindow:
     def __init__(self):
@@ -23,8 +24,13 @@ class MainWindow:
     def dokruscal(self):
         a = int(self.uic.txtSoDinh.text())
         b = self.uic.txtMaTran.toPlainText()
-        # kruskal_algo(a, b)
-        self.uic.txtResult.setPlainText(kruskal_algo(a, b))
+        rs = ""
+        kruskal = kruskal_algo(a, b)
+        print(kruskal)
+        for u, ver, weight in kruskal:
+            rs = rs + ("%d - %d : %d \n" % (u, ver, weight))
+        self.uic.txtResult.setPlainText(rs)
+        draw_graph(kruskal)
 
     def doprim(self):
         a = int(self.uic.txtSoDinh.text())
