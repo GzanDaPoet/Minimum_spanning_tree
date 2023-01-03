@@ -3,6 +3,10 @@ from PyQt5 import QtWidgets
 from Home import Ui_MainWindow
 from Prim import prim
 from Kruskal import kruskal_algo
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+from matplotlib.figure import Figure
+
+
 
 class MainWindow:
     def __init__(self):
@@ -14,11 +18,11 @@ class MainWindow:
         # self.uic.btnInfo.clicked.connect(self.)
         # self.uic.btnNext.clicked.connect(self.)
         # self.uic.btnPrev.clicked.connect(self.)
+        # self.uic.widget_4 = dg.plt
 
     # def showInfo(self):
 
     # def donext(self):
-
 
     def dokruscal(self):
         a = int(self.uic.txtSoDinh.text())
@@ -31,7 +35,6 @@ class MainWindow:
         b = self.uic.txtMaTran.toPlainText()
         prim(a, b)
         self.uic.txtResult.setPlainText(prim(a, b))
-
 
     # def showinfo(self):
     #     self.uic.pushButton.setEnabled(False)
@@ -46,7 +49,6 @@ if __name__ == "__main__":
     main_win = MainWindow()
     main_win.show()
     sys.exit(app.exec())
-
 
 # if __name__ == "__main__":
 #     app = QtWidgets.QApplication(sys.argv)
