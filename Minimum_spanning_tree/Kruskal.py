@@ -65,8 +65,4 @@ def kruskal_algo(v, t):
             e = e + 1
             result.append([u, ver, w])
             apply_union(parent, rank, x, y)
-    for u, ver, weight in result:
-        # print("%d - %d: %d" % (u, ver, weight))
-        rs = rs + ("%d - %d : %d \n" % (u, ver, weight))
-    return rs
-
+    return result
