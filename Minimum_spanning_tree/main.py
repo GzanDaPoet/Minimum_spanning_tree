@@ -14,13 +14,13 @@ class MainWindow:
         self.uic.setupUi(self.main_win)
         self.uic.btnKruscal.clicked.connect(self.doKruscal)
         self.uic.btnPrim.clicked.connect(self.doPrim)
-        self.uic.btnInfo.clicked.connect(self.checkInput)
         self.uic.btnNext.clicked.connect(self.doNext)
         self.uic.btnPrev.clicked.connect(self.doPrev)
         self.uic.btnClear.clicked.connect(self.clear)
         self.count = 0
         self.length = 0
         self.arrayDraw = []
+
 
     def draw_root_graph(self, textArr):
         a = list(textArr.split('\n'))
@@ -81,15 +81,13 @@ class MainWindow:
             self.uic.txtChuY1_2.setText("")
             return True
 
-
     def setup_draw_graph(self, arr):
         self.length = len(arr)
         self.arrayDraw = arr
         self.count = 1
         draw_graph(self.arrayDraw[:self.count:], "graph.png")
         qpixMap = QPixmap("graph.png")
-        self.uic.image_label.setPixmap(qpixMap.scaled(500,311))
-
+        self.uic.image_label.setPixmap(qpixMap.scaled(500, 311))
 
     def showInfo(self, m, n):
         self.uic.tblMaTran.setRowCount(m)
@@ -125,7 +123,7 @@ class MainWindow:
             a = int(a)
             kruskal = kruskal_algo(a, b)
             for u, ver, weight in kruskal:
-                rs = rs + ("%d - %d : %d \n" % (u +1, ver +1, weight))
+                rs = rs + ("%d - %d : %d \n" % (u + 1, ver + 1, weight))
             self.uic.txtResult.setPlainText(rs)
             self.showInfo(a, b)
             self.setup_draw_graph(kruskal)
