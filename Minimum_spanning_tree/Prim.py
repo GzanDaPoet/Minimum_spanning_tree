@@ -25,7 +25,7 @@ def prim(v, g):
                             minimum = g[i][j]
                             x = i
                             y = j
-        rs.append([x, y, g[x][y]])
+        rs.append([x+1, y+1, g[x][y]])
         selected[y] = True
         no_edge += 1
     return rs

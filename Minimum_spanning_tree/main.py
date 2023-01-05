@@ -59,7 +59,6 @@ class MainWindow:
         if not m.isnumeric():
             self.uic.txtChuY1.setText("Đỉnh nhập vào phải là số nguyên dương")
             self.uic.txtChuY1_2.setText("")
-            print("Dinh nhap vao phai la so duong")
             return False
         else:
             self.uic.txtChuY1.setText("")
@@ -123,7 +122,7 @@ class MainWindow:
             a = int(a)
             kruskal = kruskal_algo(a, b)
             for u, ver, weight in kruskal:
-                rs = rs + ("%d - %d : %d \n" % (u + 1, ver + 1, weight))
+                rs = rs + ("%d - %d : %d \n" % (u , ver , weight))
             self.uic.txtResult.setPlainText(rs)
             self.showInfo(a, b)
             self.setup_draw_graph(kruskal)

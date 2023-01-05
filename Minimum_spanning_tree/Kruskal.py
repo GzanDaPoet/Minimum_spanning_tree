@@ -1,9 +1,9 @@
 # add edge to graph
 def add_edge(g, u, v, w):
     g.append([u, v, w])
+
+
 # Search function
-
-
 def find(parent, i):
     if parent[i] == i:
         return i
@@ -49,6 +49,6 @@ def kruskal_algo(v, t):
         y = find(parent, ver)
         if x != y:
             e = e + 1
-            result.append([u, ver, w])
+            result.append([u+1, ver+1, w])
             apply_union(parent, rank, x, y)
     return result
