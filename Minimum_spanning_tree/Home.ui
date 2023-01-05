@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CÂY KHUNG CỦA ĐỒ THỊ</string>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -53,6 +53,11 @@
        <height>861</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+      </font>
+     </property>
      <property name="autoFillBackground">
       <bool>false</bool>
      </property>
@@ -64,13 +69,13 @@
        <rect>
         <x>30</x>
         <y>70</y>
-        <width>181</width>
+        <width>191</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
        </font>
       </property>
@@ -81,15 +86,15 @@
      <widget class="QLineEdit" name="txtSoDinh">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>232</x>
         <y>70</y>
-        <width>113</width>
+        <width>91</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
        </font>
       </property>
@@ -108,7 +113,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
         <weight>50</weight>
         <bold>false</bold>
@@ -121,15 +126,15 @@
      <widget class="QPushButton" name="btnKruscal">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>520</y>
-        <width>111</width>
+        <x>90</x>
+        <y>560</y>
+        <width>171</width>
         <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
        </font>
       </property>
@@ -146,15 +151,15 @@
      <widget class="QPushButton" name="btnPrim">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>520</y>
-        <width>111</width>
+        <x>90</x>
+        <y>660</y>
+        <width>171</width>
         <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
        </font>
       </property>
@@ -168,26 +173,70 @@
        <string>Prim</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnInfo">
+     <widget class="QLabel" name="txtChuY1">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>600</y>
-        <width>171</width>
-        <height>51</height>
+        <x>40</x>
+        <y>110</y>
+        <width>271</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtChuY1_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>510</y>
+        <width>291</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(255, 0, 0)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnClear">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>770</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background:rgb(255, 85, 0)</string>
+       <string notr="true">background: rgb(255, 85, 0)</string>
       </property>
       <property name="text">
-       <string>Hướng dẫn</string>
+       <string>Làm mới</string>
       </property>
      </widget>
     </widget>
@@ -213,9 +262,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>10</y>
-        <width>331</width>
-        <height>311</height>
+        <y>50</y>
+        <width>351</width>
+        <height>331</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -226,7 +275,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
        </font>
       </property>
@@ -234,32 +283,39 @@
        <string notr="true">background:rgb(255, 255, 255)</string>
       </property>
      </widget>
-     <widget class="QFrame" name="frame_4">
+     <widget class="QWidget" name="widget_4" native="true">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>10</y>
-        <width>731</width>
-        <height>311</height>
+        <x>380</x>
+        <y>50</y>
+        <width>701</width>
+        <height>331</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background:rgb(255, 255, 255)</string>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
+      <widget class="QLabel" name="lblMaTranGoc">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>681</width>
+         <height>311</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </widget>
      <widget class="QFrame" name="frame">
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>360</y>
+        <y>400</y>
         <width>871</width>
-        <height>481</height>
+        <height>441</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -275,14 +331,14 @@
        <property name="geometry">
         <rect>
          <x>770</x>
-         <y>450</y>
+         <y>410</y>
          <width>101</width>
          <height>31</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>Segoe UI</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -297,14 +353,14 @@
        <property name="geometry">
         <rect>
          <x>660</x>
-         <y>450</y>
+         <y>410</y>
          <width>101</width>
          <height>31</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>Segoe UI</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -319,9 +375,9 @@
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>10</y>
+         <y>20</y>
          <width>831</width>
-         <height>421</height>
+         <height>371</height>
         </rect>
        </property>
        <property name="text">
@@ -333,14 +389,14 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>360</y>
+        <y>430</y>
         <width>191</width>
-        <height>481</height>
+        <height>411</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
         <weight>50</weight>
         <bold>false</bold>
@@ -360,14 +416,14 @@
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>320</y>
+        <y>390</y>
         <width>81</width>
         <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
         <underline>true</underline>
        </font>
@@ -377,6 +433,46 @@
       </property>
       <property name="text">
        <string>Kết quả:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>10</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>14</pointsize>
+        <underline>true</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ma trận gốc:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>10</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>14</pointsize>
+        <underline>true</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>Đồ thị gốc:</string>
       </property>
      </widget>
     </widget>
