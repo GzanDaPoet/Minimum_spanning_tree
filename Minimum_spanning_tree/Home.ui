@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CÂY KHUNG CỦA ĐỒ THỊ</string>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -204,6 +204,15 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0)</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -217,11 +226,20 @@
         <height>16</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(255, 0, 0)</string>
+      </property>
       <property name="text">
        <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="btnClear">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -240,7 +258,7 @@
        <string notr="true">background: rgb(255, 85, 0)</string>
       </property>
       <property name="text">
-       <string>Bài mới</string>
+       <string>Làm mới</string>
       </property>
      </widget>
     </widget>
@@ -279,7 +297,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Times New Roman</family>
+        <family>Segoe UI</family>
         <pointsize>14</pointsize>
        </font>
       </property>
