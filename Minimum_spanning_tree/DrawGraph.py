@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import networkx as nx
-def draw_graph(listEdge):
+def draw_graph(listEdge, url):
     G = nx.Graph()
     plt.clf()
     for u, ver, weightVar in listEdge:
@@ -28,4 +28,4 @@ def draw_graph(listEdge):
     ax.margins(0.08)
     plt.axis("off")
     plt.tight_layout()
-    plt.savefig("graph.png")
+    plt.savefig(url)

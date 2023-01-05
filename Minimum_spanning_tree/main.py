@@ -21,6 +21,21 @@ class MainWindow:
         self.length = 0
         self.arrayDraw = []
 
+    def draw_root_graph(self, textArr):
+        a = list(textArr.split('\n'))
+        lst = []
+        graph = []
+        for x in a:
+            test = x.split(", ")
+            tmp = [int(b) for b in test]
+            lst.append(tmp)
+        for i in range(0, len(lst)):
+            for j in range(0, len(lst[i])):
+                if lst[i][j] > 0:
+                    graph.append([i, j, lst[i][j]])
+        draw_graph(graph, "root_graph.png")
+        qpixMapRoot = QPixmap("root_graph.png")
+        self.uic.lblMaTranGoc.setPixmap(qpixMapRoot)
     def checkInput(self,m,n):
         tmp = 0
         if (not m.isnumeric()):
@@ -50,6 +65,13 @@ class MainWindow:
             print("Done")
             return True
 
+    def setup_draw_graph(self, arr):
+        self.length = len(arr)
+        self.arrayDraw = arr
+        self.count = 1
+        draw_graph(self.arrayDraw[:self.count:], "graph.png")
+        qpixMap = QPixmap("graph.png")
+        self.uic.image_label.setPixmap(qpixMap)
 
     def showInfo(self, m, n):
         self.uic.tblMaTran.setRowCount(m)
@@ -66,15 +88,14 @@ class MainWindow:
     def donext(self):
         if self.length >= self.count + 1:
             self.count = self.count + 1
-            draw_graph(self.arrayDraw[:self.count:])
+            draw_graph(self.arrayDraw[:self.count:], "graph.png")
             qpixMap = QPixmap("graph.png")
             self.uic.image_label.setPixmap(qpixMap)
-
 
     def doPrev(self):
         if self.count - 1 >= 0:
             self.count = self.count - 1
-            draw_graph(self.arrayDraw[:self.count:])
+            draw_graph(self.arrayDraw[:self.count:], "graph.png")
             qpixMap = QPixmap("graph.png")
             self.uic.image_label.setPixmap(qpixMap)
 
@@ -88,12 +109,10 @@ class MainWindow:
             for u, ver, weight in kruskal:
                 rs = rs + ("%d - %d : %d \n" % (u, ver, weight))
             self.uic.txtResult.setPlainText(rs)
-            self.length = len(kruskal)
-            self.arrayDraw = kruskal
-            self.count = 1
             self.showInfo(a, b)
-            qpixMap = QPixmap()
-            self.uic.image_label.setPixmap(qpixMap)
+            self.setup_draw_graph(kruskal)
+            self.draw_root_graph(b)
+
 
     def doprim(self):
         rs = ""
@@ -105,12 +124,8 @@ class MainWindow:
             for u, ver, weight in arrPrim:
                 rs = rs + ("%d - %d : %d \n" % (u, ver, weight))
             self.uic.txtResult.setPlainText(rs)
-            self.length = len(arrPrim)
-            self.count = 1
-            self.arrayDraw = arrPrim
             self.showInfo(a, b)
-            qpixMap = QPixmap()
-            self.uic.image_label.setPixmap(qpixMap)
+            self.setup_draw_graph(arrPrim)
 
 
     def show(self):
