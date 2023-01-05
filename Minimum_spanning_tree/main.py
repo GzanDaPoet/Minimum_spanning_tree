@@ -37,8 +37,10 @@ class MainWindow:
         draw_graph(graph, "root_graph.png")
         qpixMapRoot = QPixmap("root_graph.png")
         self.uic.lblMaTranGoc.setPixmap(qpixMapRoot)
+        self.uic.lblMaTranGoc.setScaledContents(True)
         qpixMap = QPixmap("graph.png")
         self.uic.image_label.setPixmap(qpixMap)
+        self.uic.image_label.setScaledContents(True)
 
     def clear(self):
         self.uic.tblMaTran.setRowCount(0)
@@ -48,10 +50,9 @@ class MainWindow:
         self.uic.txtChuY1.setText("")
         self.uic.txtMaTran.setPlainText("")
         self.uic.txtResult.setPlainText("")
-        qpixMapRoot = QPixmap()
-        self.uic.lblMaTranGoc.setPixmap(qpixMapRoot)
-        qpixMap = QPixmap()
-        self.uic.image_label.setPixmap(qpixMap)
+        qpixMapClear = QPixmap()
+        self.uic.lblMaTranGoc.setPixmap(qpixMapClear)
+        self.uic.image_label.setPixmap(qpixMapClear)
 
     def checkInput(self, m, n):
         tmp = 0
@@ -87,7 +88,7 @@ class MainWindow:
         self.count = 1
         draw_graph(self.arrayDraw[:self.count:], "graph.png")
         qpixMap = QPixmap("graph.png")
-        self.uic.image_label.setPixmap(qpixMap)
+        self.uic.image_label.setPixmap(qpixMap.scaled(500,311))
 
 
     def showInfo(self, m, n):
@@ -120,11 +121,11 @@ class MainWindow:
         a = self.uic.txtSoDinh.text()
         b = self.uic.txtMaTran.toPlainText()
         rs = ""
-        if (self.checkInput(a, b)):
+        if self.checkInput(a, b):
             a = int(a)
             kruskal = kruskal_algo(a, b)
             for u, ver, weight in kruskal:
-                rs = rs + ("%d - %d : %d \n" % (u, ver, weight))
+                rs = rs + ("%d - %d : %d \n" % (u +1, ver +1, weight))
             self.uic.txtResult.setPlainText(rs)
             self.showInfo(a, b)
             self.setup_draw_graph(kruskal)
