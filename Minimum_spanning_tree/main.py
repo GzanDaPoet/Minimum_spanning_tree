@@ -50,6 +50,8 @@ class MainWindow:
         self.uic.txtResult.setPlainText("")
         qpixMapRoot = QPixmap()
         self.uic.lblMaTranGoc.setPixmap(qpixMapRoot)
+        qpixMap = QPixmap()
+        self.uic.image_label.setPixmap(qpixMap)
 
     def checkInput(self, m, n):
         tmp = 0
@@ -86,6 +88,7 @@ class MainWindow:
         draw_graph(self.arrayDraw[:self.count:], "graph.png")
         qpixMap = QPixmap("graph.png")
         self.uic.image_label.setPixmap(qpixMap)
+
 
     def showInfo(self, m, n):
         self.uic.tblMaTran.setRowCount(m)
@@ -139,6 +142,7 @@ class MainWindow:
             self.uic.txtResult.setPlainText(rs)
             self.showInfo(a, b)
             self.setup_draw_graph(arrPrim)
+            self.draw_root_graph(b)
 
     def show(self):
         self.main_win.show()
